@@ -9,7 +9,7 @@ define("ADMIN_PASSWORD_FILE", $_SERVER['OPENSHIFT_DATA_DIR'] . '/.initial_ownclo
 
 $AUTOCONFIG = array(
      'installed' => false,
-     'dbtype' => 'pqsql',
+     'dbtype' => 'pgsql',
      'dbtableprefix' => 'oc_',
      'adminlogin' => 'admin',
      'adminpass' => trim(array_shift(file(ADMIN_PASSWORD_FILE))),
@@ -18,5 +18,6 @@ $AUTOCONFIG = array(
      'dbuser' => DBUSER,
      'dbpass' => DBPASS,
      'dbhost' => DBHOST, 
+     'dbtableprefix' => 'owncloud_',
   );
 ?>
