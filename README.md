@@ -14,12 +14,12 @@ Create an account at https://www.openshift.com
 
 Create a PHP application with a PostgreSQL cartridge:
 
-	rhc app create owncloud php-5.4 postgresql-9.2 cron-1.4
+	rhc app create $appname php-5.4 postgresql-9.2 cron-1.4
 
 Add this upstream ownCloud quickstart repo
 
-	cd owncloud
-	git remote add upstream -m master git://github.com/openshift/owncloud-openshift-quickstart.git
+	cd $appname
+	git remote add upstream -m master https://github.com/iCarto/owncloud-openshift-quickstart.git
 	git pull -s recursive -X theirs upstream master
 
 Push back to your OpenShift repo
@@ -28,7 +28,7 @@ Push back to your OpenShift repo
 
 Head to your application at:
 
-	http://owncloud-$yourdomain.rhcloud.com
+	http://$appname-$yourdomain.rhcloud.com
 
 Default Credentials
 -------------------
@@ -40,6 +40,6 @@ To download clients that will sync your ownCloud instance with desktop clients, 
 
 To give your new ownCloud site a web address of its own, add your desired alias:
 
-	rhc app add-alias -a owncloud --alias "$whatever.$mydomain.com"
+	rhc app add-alias -a $appname --alias "$whatever.$mydomain.com"
 
 Then add a cname entry in your domain's dns configuration pointing your alias to $whatever-$yourdomain.rhcloud.com.
