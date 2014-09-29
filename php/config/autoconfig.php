@@ -18,6 +18,5 @@ $AUTOCONFIG = array(
      'dbuser' => DBUSER,
      'dbpass' => DBPASS,
      'dbhost' => DBHOST, 
-     'dbtableprefix' => 'owncloud_',
   );
 ?>
