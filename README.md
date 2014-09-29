@@ -12,9 +12,9 @@ Running on OpenShift
 
 Create an account at https://www.openshift.com
 
-Create a PHP application with a MySQL cartridge:
+Create a PHP application with a PostgreSQL cartridge:
 
-	rhc app create owncloud php-5.4 mysql-5.5 cron-1.4
+	rhc app create owncloud php-5.4 postgresql-9.2 cron-1.4
 
 Add this upstream ownCloud quickstart repo
 

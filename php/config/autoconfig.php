@@ -1,15 +1,15 @@
 <?php
 define("DIRECTORY",$_SERVER['OPENSHIFT_DATA_DIR'] );
 define("DBNAME",$_SERVER['OPENSHIFT_APP_NAME'] );
-define("DBUSER",$_SERVER['OPENSHIFT_MYSQL_DB_USERNAME'] );
-define("DBPASS",$_SERVER['OPENSHIFT_MYSQL_DB_PASSWORD'] );
-define("DBHOST",$_SERVER['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_SERVER['OPENSHIFT_MYSQL_DB_PORT'] );
+define("DBUSER",$_SERVER['OPENSHIFT_POSTGRESQL_DB_USERNAME'] );
+define("DBPASS",$_SERVER['OPENSHIFT_POSTGRESQL_DB_PASSWORD'] );
+define("DBHOST",$_SERVER['OPENSHIFT_POSTGRESQL_DB_HOST'] . ':' . $_SERVER['OPENSHIFT_POSTGRESQL_DB_PORT'] );
 
 define("ADMIN_PASSWORD_FILE", $_SERVER['OPENSHIFT_DATA_DIR'] . '/.initial_owncloud_password' );
 
 $AUTOCONFIG = array(
      'installed' => false,
-     'dbtype' => 'mysql',
+     'dbtype' => 'pqsql',
      'dbtableprefix' => 'oc_',
      'adminlogin' => 'admin',
      'adminpass' => trim(array_shift(file(ADMIN_PASSWORD_FILE))),
